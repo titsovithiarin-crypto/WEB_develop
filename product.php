@@ -129,7 +129,7 @@ $result = mysqli_query($conn, $sql);
             <ul class="nav navbar-nav navbar-right">
               <li class="">
                 <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                  <img src="images/img.jpg" alt="">J
+                  <img src="images/img.jpg" alt="">
                   <span class=" fa fa-angle-down"></span>
                 </a>
                 <ul class="dropdown-menu dropdown-usermenu pull-right">
@@ -274,9 +274,9 @@ $result = mysqli_query($conn, $sql);
                       <?php
                       if (mysqli_num_rows($result) > 0) {
                         while ($row = mysqli_fetch_assoc($result)) {
-                        echo  ' <tr class="even pointer">';
-                        echo  '<td class="a-center ">';
-                         echo  '<input type="checkbox" class="flat" name="table_records">
+                          echo  ' <tr class="even pointer">';
+                          echo  '<td class="a-center ">';
+                          echo  '<input type="checkbox" class="flat" name="table_records">
                         </td>';
                           echo "<td>" . $row['id'] . "</td>";
                           echo "<td>" . $row['name'] . "</td>";
@@ -288,18 +288,23 @@ $result = mysqli_query($conn, $sql);
 
 
 
-                          echo '<td><a href="form_update_profuct.php?id=' . $row['id'] . '" 
-                        class="btn btn-success"
-                        
-                        >Update</a></td>';
+                          echo '<td>
+                                    <a href="form_update_profuct.php?id=' . $row['id'] . '"
+                                      class="btn btn-success"
+                                      >
+                                      Update
+                                    </a>
+                                </td>';
                           // echo '<td><a  onclick="return confirm(\'want to delete?\')" href="delete_product.php?id='.$row['id']. '"class="btn btn-danger">Delete</a></td>';
 
                           echo "<td>";
+
                           echo '<form action="delete_product.php" method="post">
-                                    <input type="hidden" name="id" value="' . $row['id'] . '">
-                                    <input type="submit" value="Delete">
+                                  <input type="hidden" name="id" value="' . $row['id'] . '">
+                                  <input type="submit" value="Delete" class="btn btn-danger">
                                 </form>';
                           echo "</td>";
+
 
                           echo "</tr>";
                         }
@@ -307,9 +312,9 @@ $result = mysqli_query($conn, $sql);
                         echo "No Data in database!!";
                       }
                       ?>
-                     
-                        
-                        
+
+
+
                       </tr>
 
                     </tbody>
@@ -326,63 +331,77 @@ $result = mysqli_query($conn, $sql);
         <!-- table -->
 
 
+        <!-- Modal -->
+
+
       </div>
-
-
     </div>
   </div>
-  </div>
-  </div>
-  <!-- /table -->
-  </div>
-  </div>
-
-  <!-- /page content -->
 
 
-  </div>
-  </div>
+</body>
 
-  <!-- jQuery -->
-  <script src="vendors/jquery/dist/jquery.min.js"></script>
-  <!-- Bootstrap -->
-  <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
-  <!-- FastClick -->
-  <script src="vendors/fastclick/lib/fastclick.js"></script>
-  <!-- NProgress -->
-  <script src="vendors/nprogress/nprogress.js"></script>
-  <!-- Chart.js -->
-  <script src="vendors/Chart.js/dist/Chart.min.js"></script>
-  <!-- gauge.js -->
-  <script src="vendors/gauge.js/dist/gauge.min.js"></script>
-  <!-- bootstrap-progressbar -->
-  <script src="vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
-  <!-- iCheck -->
-  <script src="vendors/iCheck/icheck.min.js"></script>
-  <!-- Skycons -->
-  <script src="vendors/skycons/skycons.js"></script>
-  <!-- Flot -->
-  <script src="vendors/Flot/jquery.flot.js"></script>
-  <script src="vendors/Flot/jquery.flot.pie.js"></script>
-  <script src="vendors/Flot/jquery.flot.time.js"></script>
-  <script src="vendors/Flot/jquery.flot.stack.js"></script>
-  <script src="vendors/Flot/jquery.flot.resize.js"></script>
-  <!-- Flot plugins -->
-  <script src="vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
-  <script src="vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
-  <script src="vendors/flot.curvedlines/curvedLines.js"></script>
-  <!-- DateJS -->
-  <script src="vendors/DateJS/build/date.js"></script>
-  <!-- JQVMap -->
-  <script src="vendors/jqvmap/dist/jquery.vmap.js"></script>
-  <script src="vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
-  <script src="vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
-  <!-- bootstrap-daterangepicker -->
-  <script src="vendors/moment/min/moment.min.js"></script>
-  <script src="vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+</html>
 
-  <!-- Custom Theme Scripts -->
-  <script src="build/js/custom.min.js"></script>
+</div>
+
+
+</div>
+</div>
+</div>
+</div>
+<!-- /table -->
+</div>
+</div>
+
+<!-- /page content -->
+
+
+</div>
+</div>
+<!-- Bootstrap JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- jQuery -->
+<script src="vendors/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap -->
+<script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- FastClick -->
+<script src="vendors/fastclick/lib/fastclick.js"></script>
+<!-- NProgress -->
+<script src="vendors/nprogress/nprogress.js"></script>
+<!-- Chart.js -->
+<script src="vendors/Chart.js/dist/Chart.min.js"></script>
+<!-- gauge.js -->
+<script src="vendors/gauge.js/dist/gauge.min.js"></script>
+<!-- bootstrap-progressbar -->
+<script src="vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+<!-- iCheck -->
+<script src="vendors/iCheck/icheck.min.js"></script>
+<!-- Skycons -->
+<script src="vendors/skycons/skycons.js"></script>
+<!-- Flot -->
+<script src="vendors/Flot/jquery.flot.js"></script>
+<script src="vendors/Flot/jquery.flot.pie.js"></script>
+<script src="vendors/Flot/jquery.flot.time.js"></script>
+<script src="vendors/Flot/jquery.flot.stack.js"></script>
+<script src="vendors/Flot/jquery.flot.resize.js"></script>
+<!-- Flot plugins -->
+<script src="vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
+<script src="vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
+<script src="vendors/flot.curvedlines/curvedLines.js"></script>
+<!-- DateJS -->
+<script src="vendors/DateJS/build/date.js"></script>
+<!-- JQVMap -->
+<script src="vendors/jqvmap/dist/jquery.vmap.js"></script>
+<script src="vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+<script src="vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
+<!-- bootstrap-daterangepicker -->
+<script src="vendors/moment/min/moment.min.js"></script>
+<script src="vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+
+<!-- Custom Theme Scripts -->
+<script src="build/js/custom.min.js"></script>
 
 </body>
 

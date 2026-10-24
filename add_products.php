@@ -1,3 +1,9 @@
+<?php
+include 'connection.php';
+
+$sql = 'select * from tbl_category';
+$result = mysqli_query($conn, $sql);
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,7 +15,10 @@
 
     <title>Rin Titsovithia </title>
 
+    <!-- own link -->
+      <link rel="stylesheet" href="./css/maps/style_add_form.css">
     <!-- Bootstrap -->
+     
     <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
@@ -210,18 +219,52 @@
          
           <!-- /top tiles -->
 
-         
-		  
-		  
+       
 		   
             <!-- table -->
-         
+
+
+<div class="vigor">
+    <h2>Add Product</h2>
+
+    <form action="save_product.php" method="post" enctype="multipart/form-data">
+
+        <label for="product">Product:</label>
+        <input type="text" id="product" name="product">
+
+        <label for="price">Price:</label>
+        <input type="number" id="price" name="price" step="any">
+
+        <label for="qty">Qty:</label>
+        <input type="number" id="qty" name="qty">
+
+        <label for="cat_id">Category:</label>
+        <select name="cat_id" id="cat_id" required>
+            <option value="" disabled selected>Select Category</option>
+            <?php
+                while ($row = mysqli_fetch_assoc($result)) {
+                    echo '<option value="' . $row['id'] . '">' .
+                         htmlspecialchars($row['name']) .
+                         '</option>';
+                }
+            ?>
+        </select>
+
+        <label for="fileToUpload">Image:</label>
+        <input type="file" id="fileToUpload" name="fileToUpload">
+
+        <input type="submit" name="submit" value="Save Product">
+
+    </form>
+</div>
+
 			<!-- /table -->
           </div>
         </div>
      
         <!-- /page content -->
 
+        
        
       </div>
     </div>

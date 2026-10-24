@@ -1,0 +1,65 @@
+.vigor {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 40px 200px;
+ margin-top: 100px;
+    background: #fcfcfc;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.vigor h2 {
+    margin: 0 0 20px;
+    color: #174ea6;
+    font-size: 24px;
+    text-align: center;
+}
+
+.vigor label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.vigor input[type="text"],
+.vigor input[type="number"],
+.vigor input[type="file"],
+.vigor select {
+    display: block;
+    width: 100%;
+    min-height: 38px;
+    margin-bottom: 12px;
+    padding: 8px 10px;
+
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    background: #fff;
+    font-size: 14px;
+}
+
+.vigor input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background: #198754;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.vigor input[type="submit"]:hover {
+    background: #146c43;
+}
+
+@media (max-width: 600px) {
+    .vigor {
+        width: 95%;
+        margin: 20px auto;
+        padding: 18px;
+    }
+}
