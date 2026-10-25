@@ -1,9 +1,9 @@
 .vigor {
     width: 90%;
-    max-width: 1100px;
+    max-width: 900px;
     margin: 30px auto;
-    padding: 40px 200px;
- margin-top: 100px;
+    padding: 40px 150px;
+    margin-top: 100px;
     background: #fcfcfc;
     border-radius: 18px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
@@ -45,19 +45,21 @@
     padding: 10px;
     border: none;
     border-radius: 8px;
-    background: #198754;
+    background: #0058bd;
     color: white;
     font-size: 14px;
     font-weight: bold;
     cursor: pointer;
+    
 }
 
 .vigor input[type="submit"]:hover {
-    background: #146c43;
+    background: #0058bd;
 }
 
 @media (max-width: 600px) {
     .vigor {
+        margin-top: 90px;
         width: 95%;
         margin: 20px auto;
         padding: 18px;

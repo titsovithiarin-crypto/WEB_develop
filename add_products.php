@@ -17,6 +17,7 @@ $result = mysqli_query($conn, $sql);
 
     <!-- own link -->
       <link rel="stylesheet" href="./css/maps/style_add_form.css">
+      <link rel="stylesheet" href="./css/style_add_form.css">
     <!-- Bootstrap -->
      
     <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -44,7 +45,7 @@ $result = mysqli_query($conn, $sql);
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Welcome Beltei</span></a>
+              <a href="index.php" class="site_title"><i class="fa fa-paw"></i> <span>Welcome Beltei</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -253,7 +254,7 @@ $result = mysqli_query($conn, $sql);
         <label for="fileToUpload">Image:</label>
         <input type="file" id="fileToUpload" name="fileToUpload">
 
-        <input type="submit" name="submit" value="Save Product">
+        <input class="btn btn-primary" type="submit" name="submit" value="Save Product">
 
     </form>
 </div>
